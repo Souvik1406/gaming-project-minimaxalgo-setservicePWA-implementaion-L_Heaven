@@ -1,0 +1,68 @@
+.container-sp{
+    margin-top: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body{
+    height : 100vh;
+    background-image: url("Start-Page.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.Ulist{
+    list-style: none;
+    text-decoration: none;
+}
+
+.anv{
+    padding: 5px;
+    font-weight: 800;
+    border-radius: 7px;
+    text-decoration: none;
+    color : whitesmoke;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(235, 99, 9));
+    height: 100px;
+    width: auto;
+    font-size: 50px;
+    text-align: center;
+}
+
+.anv:hover{
+    transition: 0.5s;
+    text-transform: capitalize;
+    background-color: black;
+    color: antiquewhite;
+    padding: 12px;
+    font-size: 30px;
+    font-weight: 800;
+    
+}
+
+.Lli{
+    list-style: none;
+}
+
+@media only screen and (max-width: 648px) {
+   .anv{
+       font-size: 25px;
+   }
+
+   .anv:hover{
+       font-size : 35px;
+   }
+  }
+
+  @media only screen and (max-width: 448px) {
+      .anv{
+          font-size: 18px;
+      }
+
+      .anv:hover{
+          font-size: 25px;
+      }
+      
+    }

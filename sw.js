@@ -1,0 +1,61 @@
+self.addEventListener('install',function(event){
+    event.waitUntil(
+        caches.open('sw-cache').then(function(cache){
+            return cache.add('index.html',
+            'Dice/dice.html',
+            'tiktakpractice/tiktakpractice.html',
+            'css/style.css',
+            'css/bootstrap.min.css',
+            'css/ionicons.min.css',
+            'css/bootstrap/mixins/_breakpoints.css',
+            'css/bootstrap/mixins/_transition.css',
+            'css/bootstrap/mixins/_visibility.css',
+            'Dice/images/dice1.png',
+            'Dice/images/dice2.png',
+            'Dice/images/dice3.png',
+            'Dice/images/dice4.png',
+            'Dice/images/dice5.png',
+            'Dice/images/dice6.png',
+            'Dice/dice.html',
+            'Dice/index.js',
+            'Dice/styles.css',
+            'fonts/fonticons/css/_ionicons.scss',
+            'fonts/ionicons/css/ionicons.min.css',
+            'fonts/ionicons/fonts/ionicons.eot',
+            'fonts/ionicons/fonts/ionicons.svg',
+            'fonts/ionicons/fonts/ionicons.ttf',
+            'fonts/ionicons/fonts/ionicons.woff',
+            'fonts/ionicons/fonts/ionicons.woff2',
+            'js/bootstrap.min.js',
+            'js/jquery.min.js',
+            'js/main.js',
+            'js/popper.js',
+            'tiktakpractice/practice.css',
+            'tiktpractice/practice.js',
+            'tiktpractice/tiktakpractice.js',
+            'home.css',
+            'index.html',
+            'mail.html',
+            'main.js',
+            'manifest.json',
+            'o.png',
+            'script.js',
+            'sw.js',
+            'Start-page.jpg',
+            'style.css',
+            'x.png',
+            'tiktakhard.html',
+            'images/wdicon1.png',
+            'images/wdicon2.png',
+            );
+        })
+    );
+});
+
+self.addEventListener('fetch',function(event){
+    event.respondwith(
+        caches.match(event.request).then(function(response){
+            return response || fetch(event.request);
+        })
+    );
+});
